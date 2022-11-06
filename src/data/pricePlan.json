@@ -37,31 +37,31 @@
     "features" : [
         {
             "name" : "Full courses library",
-            "available" : ["starter", "pro", "team"]
+            "available" : ["starter", "pro", "teams"]
         },
         {
             "name" : "A new daily meditation",
-            "available" : ["starter", "pro", "team"]
+            "available" : ["starter", "pro", "teams"]
         },
         {
             "name" : "Access to the meditation guru",
-            "available" : ["starter", "pro", "team"]
+            "available" : ["starter", "pro", "teams"]
         },
         {
             "name" : "Sleep podcasts and execises",
-            "available" : ["pro", "team"]
+            "available" : ["pro", "teams"]
         },
         {
             "name" : "Mindfulness exercises",
-            "available" : ["pro", "team"]
+            "available" : ["pro", "teams"]
         },
         {
             "name" : "Guided meditations",
-            "available" : ["team"]
+            "available" : ["teams"]
         },
         {
             "name" : "Cooking recipes",
-            "available" : ["team"]
+            "available" : ["teams"]
         }
     ]
 }
