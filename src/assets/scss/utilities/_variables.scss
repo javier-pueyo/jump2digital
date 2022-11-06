@@ -13,9 +13,10 @@ $color-grey: #5F6974;
 $color-blue: #5A45F2;
 $color-offWhite: #DAE9EF;
 $color-white: #fff;
+$color-background: #E5E5E5;
 
 //Opacity
-$opacity-low: 0.2;
+$opacity-low: 0.5;
 
 //Border radius
 $border-radius: spToRem(8) !default;
@@ -43,6 +44,7 @@ $gutters: ($gutter-base) + rem;
 $gutter-offset: ($gutter-base * 2) + rem;
 $width-half: 100% / 2;
 $width-third: 100% / 3;
+$gutters-third: $gutter-base - ($gutter-base / 3) + rem;
 $width-quarter: 100% / 4;
 $width-sixth: 100% / 6;
 $width-eighth: 100% / 8;

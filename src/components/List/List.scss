@@ -1,9 +1,18 @@
 @import "/src/index.scss";
 
+.featured {
+    & li::before {
+        filter: invert(1);
+    }
+}
+
 li {
     font-weight: $font-weight-light;
-    margin-bottom: $spacers-l;
     @include base-flex(flex, stretch, center);
+
+    &:not(:last-child) {
+        margin-bottom: $spacers-l;
+    }
 
     &.unavailable {
         opacity: $opacity-low;

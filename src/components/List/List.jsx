@@ -3,7 +3,7 @@ import React from 'react'
 import './List.scss';
 import { useState } from "react";
 
-function List({items = [], type}) {
+function List({className, items = [], type}) {
 
   const [features, setFeatures] = useState([])
 
@@ -23,7 +23,7 @@ function List({items = [], type}) {
   }, [items])
 
   return (
-    <ul>
+    <ul className={className}>
       {
         features.map( (feature, index) => {
           return(

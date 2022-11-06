@@ -4,7 +4,7 @@
             "id" : "starter",
             "img" : { 
                 "name" : "starter plan",
-                "url" : "/assets/plan_starter.png"
+                "url" : "/assets/img/plan_starter.png"
             },
             "name" : "Starter",
             "price" : "Free",
@@ -15,7 +15,7 @@
             "id" : "pro",
             "img" : { 
                 "name" : "pro plan",
-                "url" : "/assets/plan_pro.png"
+                "url" : "/assets/img/plan_pro.png"
             },
             "name" : "Pro",
             "price" : "$49",
@@ -26,7 +26,7 @@
             "id" : "teams",
             "img" : { 
                 "name" : "teams plan",
-                "url" : "/assets/plan_teams.png"
+                "url" : "/assets/img/plan_teams.png"
             },
             "name" : "Teams",
             "price" : "$99",

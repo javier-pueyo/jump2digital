@@ -1,0 +1,27 @@
+@import "/src/assets/scss/utilities/mixins";
+@import "/src/assets/scss/utilities/variables";
+@import "/src/assets/scss/utilities/responsive";
+@import "/src/assets/scss/base/typo";
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: $container-padding-y $container-padding-x;
+    max-width: 1045px;
+    margin: 0 auto;
+    height: 100vh;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $gutters;
+}
+.col-third {
+    @include tablet-min {
+        width: calc(#{$width-third} - #{$gutters-third});
+    }
+    @include tablet-max {
+        width: 100%;
+    }
+}

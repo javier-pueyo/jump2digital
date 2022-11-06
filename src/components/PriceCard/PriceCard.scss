@@ -1,0 +1,47 @@
+@import "/src/assets/scss/utilities/mixins";
+@import "/src/assets/scss/utilities/variables";
+@import "/src/assets/scss/utilities/responsive";
+@import "/src/assets/scss/base/typo";
+
+.cardPrice {
+    background-color: $color-white;
+    border-radius: $spacers-m;
+    padding: $spacers-l;
+    @include base-flex(flex, stretch, stretch);
+    flex-direction: column;
+    gap: $spacers-l;
+
+    &__img {
+        max-height: 95px;
+        width: fit-content;
+        align-self: center;
+    }
+
+    &__name {
+        @extend .base-body-small;
+    }
+
+    &__recurrence {
+        @extend .base-body-small;
+    }
+
+    &__price {
+        @extend .base-h2;
+    }
+
+    &.featured {
+        background-color: $color-blue;
+        border: 2px solid $color-black;
+        color: white;
+        &__recurrence {
+            color: $color-white;
+        } 
+    }
+    
+    &.primary, &.secondary {
+        &__recurrence {
+            color: $color-grey;
+        } 
+    }
+}
+

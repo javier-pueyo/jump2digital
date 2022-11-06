@@ -16,7 +16,7 @@ body {
   color: $color-black;
   @include base-typo(14, $font-weight-regular, 0);
   line-height: $line-height-base;
-  background-color: $color-white;
+  background-color: $color-background;
 }
 
 p {
