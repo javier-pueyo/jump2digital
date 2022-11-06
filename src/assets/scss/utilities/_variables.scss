@@ -59,6 +59,8 @@ $box-shadow-lg:               0 1rem 3rem rgba($color-white, .175) !default;
 
 //Tipography
 $line-height-base: spToRem(16) !default;
-$font-weight-regular: 300;
-$font-weight-semibold: 500;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
 $font-weight-bold: 700;

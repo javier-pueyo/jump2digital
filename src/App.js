@@ -1,8 +1,15 @@
-import { PriceCard } from "./components";
+import { useEffect } from "react";
+import { PriceCard, Button, List } from "./components/index";
+import plans from "./data/pricePlan.json"
 
 function App() {
+   
   return (
-    <PriceCard />
+    <>
+      <Button className="primary">Hola</Button>
+      <List items={plans.features} type="starter" />
+      <PriceCard />
+    </>
   );
 }
 

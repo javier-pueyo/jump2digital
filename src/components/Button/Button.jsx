@@ -1,8 +1,9 @@
 import React from 'react'
+import './Button.scss';
 
-function Button() {
+function Button({className = '', children}) {
   return (
-    <div>Button</div>
+    <button className={className}>{children}</button>
   )
 }
 
