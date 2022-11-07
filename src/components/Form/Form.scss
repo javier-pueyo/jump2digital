@@ -1,0 +1,71 @@
+@import "/src/assets/scss/utilities/mixins";
+@import "/src/assets/scss/utilities/variables";
+@import "/src/assets/scss/utilities/responsive";
+@import "/src/assets/scss/base/typo";
+
+form {
+    & .group {
+        margin-bottom: $spacers-xl;
+    }
+
+    & .error {
+        margin-top: $spacers-s;
+        display: block;
+        color: $color-red;
+    }
+    & label {
+        display: block;
+        margin-bottom: $spacers-m;
+    }
+    & input:not(.checkbox__input) {
+        width: 100%;
+        background: transparent;
+        outline: none;
+        box-shadow: none;
+        color: $color-black;
+        border: 1px solid $color-black;
+        border-radius: $spacers-s;
+        padding: $spacers-m $spacers-l $spacers-m $spacers-l;
+        line-height: 1.5;
+    }
+    .checkbox {
+        @include base-flex(flex, flex-start, flex-start);
+        &__input {
+            @include base-flex(inline-flex, center, center);
+            appearance: none;
+            background-color: transparent;
+            margin: 0;
+            margin-right: $spacers-l;
+            border: 1px solid $color-blue;
+            border-radius: 0.15em;
+            transform: translateY(-0.075em);
+            place-content: center;
+            height: 1.5rem;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+            
+        &__input::before {
+            content: '';
+            display: inline-block;
+            width: $spacers-l;
+            height: $spacers-l;
+            background: url(/assets/img/icons/check.svg) no-repeat center center;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em var(--form-control-color);
+        }
+            
+        &__input.checked::before {
+            transform: scale(1);
+        }
+        &__label {
+            display: inline-block;
+            max-width: 350px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+    & button {
+    }
+}
