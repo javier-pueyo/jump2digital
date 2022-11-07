@@ -8,11 +8,19 @@ form {
         margin-bottom: $spacers-xl;
     }
 
-    & .error {
+    & .message {
         margin-top: $spacers-s;
         display: block;
-        color: $color-red;
+
+        & .error {
+            color: $color-red;
+        }
+        & .sucess {
+            color: $color-green;
+            font-weight: $font-weight-bold;
+        }
     }
+
     & label {
         display: block;
         margin-bottom: $spacers-m;
@@ -23,10 +31,13 @@ form {
         outline: none;
         box-shadow: none;
         color: $color-black;
-        border: 1px solid $color-black;
+        border: 1px solid $color-blue;
         border-radius: $spacers-s;
         padding: $spacers-m $spacers-l $spacers-m $spacers-l;
         line-height: 1.5;
+        &:hover, &:focus  {
+            border-color: $color-black;
+        }
     }
     .checkbox {
         @include base-flex(flex, flex-start, flex-start);
@@ -43,6 +54,10 @@ form {
             height: 1.5rem;
             aspect-ratio: 1;
             cursor: pointer;
+
+            &:hover, &:focus  {
+                border-color: $color-black;
+            }
         }
             
         &__input::before {

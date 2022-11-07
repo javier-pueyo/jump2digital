@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import './Form.scss';
 import Button from "../Button/Button";
 
 
 function Form() {
+  let [sendForm, setSendForm] = useState(false);
+
   const validate = (values) => {
     const errors = {};
 
@@ -28,15 +30,16 @@ function Form() {
     },
     validate,
     onSubmit: (values) => {
-      console.log("submit");
+      setSendForm(true);
     },
   });
 
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="group">
-        <label htmlFor="formEmail">Email</label>
+        <label htmlFor="userEmail">Email</label>
         <input
+          id="userEmail"
           type="email"
           name="userEmail"
           value={formik.values.userEmail}
@@ -44,28 +47,33 @@ function Form() {
           placeholder="my-email@gmail.com (example)"
         />
         {formik.touched.userEmail && formik.errors.userEmail ? (
-          <p className="error">{formik.errors.userEmail}</p>
+          <p className="message--error">{formik.errors.userEmail}</p>
         ) : null}
       </div>
       <div className="group">
         <div className="checkbox">
           <input className={`checkbox__input ${formik.values.userPrivacy ? 'checked' : ''}`}
+            id="userPrivacy"
             type="checkbox"
             name="userPrivacy"
             checked={formik.values.userPrivacy}
             onChange={formik.handleChange}
           />
-          <label className="checkbox__label" htmlFor="signCheck">
+          <label className="checkbox__label" htmlFor="userPrivacy">
             I have read and accepted the privacy policies
           </label>
         </div>
         {formik.touched.userPrivacy && formik.errors.userPrivacy ? (
-          <p className="error">{formik.errors.userPrivacy}</p>
+          <p className="message--error">{formik.errors.userPrivacy}</p>
         ) : null}
       </div>
       <Button className="primary" type="submit">
         Submit
       </Button>
+      {sendForm ? (
+          <p className="message--sucess">Formulario enviado correctamente</p>
+      ) : null}
+      
     </form>
   );
 }
