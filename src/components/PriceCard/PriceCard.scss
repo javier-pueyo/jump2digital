@@ -1,6 +1,7 @@
 @import "/src/assets/scss/utilities/mixins";
 @import "/src/assets/scss/utilities/variables";
 @import "/src/assets/scss/utilities/responsive";
+@import "/src/assets/scss/utilities/animations";
 @import "/src/assets/scss/base/typo";
 
 .cardPrice {
@@ -10,6 +11,12 @@
     @include base-flex(flex, stretch, stretch);
     flex-direction: column;
     gap: $spacers-l;
+    transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     &__img {
         max-height: 95px;
@@ -23,6 +30,10 @@
 
     &__recurrence {
         @extend .base-body-small;
+    }
+
+    &:hover li:not(.unavailable)::before {
+        animation: $animation-flicker;
     }
 
     &__price {
@@ -42,60 +53,6 @@
         &__recurrence {
             color: $color-grey;
         } 
-    }
-}
-
-.modal {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left : 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.253);
-    backdrop-filter: blur(2px);
-    @include base-flex(flex, center, center);
-
-    &__content {
-        position: relative;
-        @include base-flex(flex, stretch, stretch);
-        gap: $spacers-l;
-        flex-direction: column; 
-        background-color: $color-white;
-        box-shadow: $box-shadow-lg;
-        padding: $spacers-l;
-        border-radius: $spacers-m;
-        
-    }
-
-    &__subtitle {
-        @extend .base-body-small;
-    }
-
-    &__description {
-        @extend .base-body-small;
-        color: $color-grey;
-        margin-bottom: $spacers-l;
-    }
-
-    &__title {
-        @extend .base-h2;
-        line-height: 1;
-    }
-
-    &__close {
-        @include base-flex(flex, center, center);
-        position: absolute;
-        right: $spacers-m;
-        top: $spacers-m;
-        padding: $spacers-s;
-        aspect-ratio: 1;
-        max-width: $spacers-xxl;
-        background-color: transparent;
-        
-        &:hover {
-            border-color: $color-blue;
-        }
     }
 }
 

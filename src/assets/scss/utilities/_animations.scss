@@ -1,0 +1,29 @@
+$animation-blur: blur-up 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+@keyframes blur-up {
+    0% {
+            backdrop-filter: blur(0);
+    }
+    100% {
+           backdrop-filter: blur(2px);
+    }
+  }
+
+  $animation-scale: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+  @keyframes scale-up-center {
+    0% {
+              transform: scale(0.8);
+    }
+    100% {
+              transform: scale(1);
+    }
+  }
+
+  $animation-flicker : flicker 2s linear infinite;
+
+  @keyframes flicker {  
+    20% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    80% { opacity: 1.0; }
+  }

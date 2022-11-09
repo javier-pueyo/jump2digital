@@ -31,6 +31,7 @@ function Form() {
     validate,
     onSubmit: (values) => {
       setSendForm(true);
+      formik.resetForm();
     },
   });
 
@@ -40,14 +41,14 @@ function Form() {
         <label htmlFor="userEmail">Email</label>
         <input
           id="userEmail"
-          type="email"
+          type="text"
           name="userEmail"
           value={formik.values.userEmail}
           onChange={formik.handleChange}
           placeholder="my-email@gmail.com (example)"
         />
         {formik.touched.userEmail && formik.errors.userEmail ? (
-          <p className="message--error">{formik.errors.userEmail}</p>
+          <p className="message message--error">{formik.errors.userEmail}</p>
         ) : null}
       </div>
       <div className="group">
@@ -64,14 +65,14 @@ function Form() {
           </label>
         </div>
         {formik.touched.userPrivacy && formik.errors.userPrivacy ? (
-          <p className="message--error">{formik.errors.userPrivacy}</p>
+          <p className="message message--error">{formik.errors.userPrivacy}</p>
         ) : null}
       </div>
       <Button className="primary" type="submit">
         Submit
       </Button>
       {sendForm ? (
-          <p className="message--sucess">Formulario enviado correctamente</p>
+          <p className="message message--success">Form sent successfully</p>
       ) : null}
       
     </form>

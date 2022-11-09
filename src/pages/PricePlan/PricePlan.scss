@@ -12,14 +12,14 @@
     height: 100vh;
 }
 .row {
-    display: flex;
+    @include base-flex(flex, center, center);
     flex-wrap: wrap;
-    align-items: center;
     gap: $gutters;
+
 }
-.col-third {
+.col {
     @include tablet-min {
-        width: calc(#{$width-third} - #{$gutters-third});
+        flex: 1 0;
     }
     @include tablet-max {
         width: 100%;

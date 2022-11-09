@@ -9,13 +9,14 @@ form {
     }
 
     & .message {
-        margin-top: $spacers-s;
+        margin-top: $spacers-m;
         display: block;
 
-        & .error {
+        &--error {
             color: $color-red;
         }
-        & .sucess {
+        &--success {
+            text-align: center;
             color: $color-green;
             font-weight: $font-weight-bold;
         }

@@ -4,11 +4,11 @@ import './Button.scss';
 function Button({handleClick = null, type = 'button',  className = '', children = ''}) {
   return (
     <button 
-      onClick={event => handleClick()}
+      onClick={event => handleClick(true)}
       className={className}
       type={type}
     >
-      {children}
+      <span>{children}</span>
     </button>
   )
 }
