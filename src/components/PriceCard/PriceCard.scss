@@ -5,54 +5,56 @@
 @import "/src/assets/scss/base/typo";
 
 .cardPrice {
-    background-color: $color-white;
-    border-radius: $spacers-m;
-    padding: $spacers-l;
-    @include base-flex(flex, stretch, stretch);
-    flex-direction: column;
-    gap: $spacers-l;
-    transition: transform 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
-    transform: scale(1);
+	@include base-flex(flex, stretch, stretch);
 
-    &:hover {
-        transform: scale(1.05);
-    }
+	flex-direction: column;
+	gap: $spacers-l;
+	padding: $spacers-l;
+	border-radius: $spacers-m;
+	background-color: $color-white;
+	transition: transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+	transform: scale(1);
 
-    &__img {
-        max-height: 95px;
-        width: fit-content;
-        align-self: center;
-    }
+	&:hover {
+		transform: scale(1.05);
+	}
 
-    &__name {
-        @extend .base-body-small;
-    }
+	&__img {
+		align-self: center;
+		width: fit-content;
+		max-height: 95px;
+	}
 
-    &__recurrence {
-        @extend .base-body-small;
-    }
+	&__name {
+		@extend .base-body-small;
+	}
 
-    &:hover li:not(.unavailable)::before {
-        animation: $animation-flicker;
-    }
+	&__recurrence {
+		@extend .base-body-small;
+	}
 
-    &__price {
-        @extend .base-h2;
-    }
+	&:hover li:not(.unavailable)::before {
+		animation: $animation-flicker;
+	}
 
-    &.featured {
-        background-color: $color-blue;
-        border: 2px solid $color-black;
-        color: white;
-        &__recurrence {
-            color: $color-white;
-        } 
-    }
-    
-    &.primary, &.secondary {
-        &__recurrence {
-            color: $color-grey;
-        } 
-    }
+	&__price {
+		@extend .base-h2;
+	}
+
+	&.featured {
+		border: 2px solid $color-black;
+		background-color: $color-blue;
+		color: white;
+
+		&__recurrence {
+			color: $color-white;
+		}
+	}
+
+	&.primary,
+	&.secondary {
+		&__recurrence {
+			color: $color-grey;
+		}
+	}
 }
-

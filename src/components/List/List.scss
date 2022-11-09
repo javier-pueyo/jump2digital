@@ -1,29 +1,30 @@
 @import "/src/index.scss";
 
 .featured {
-    & li::before {
-        filter: invert(1);
-    }
+	& li::before {
+		filter: invert(1);
+	}
 }
 
 li {
-    font-weight: $font-weight-light;
-    @include base-flex(flex, stretch, center);
+	@include base-flex(flex, stretch, center);
 
-    &:not(:last-child) {
-        margin-bottom: $spacers-l;
-    }
+	font-weight: $font-weight-light;
 
-    &.unavailable {
-        opacity: $opacity-low;
-    }
-    
-    &::before {
-        content: '';
-        display: inline-block;
-        width: $spacers-l;
-        height: $spacers-l;
-        background: url(/assets/img/icons/check.svg) no-repeat center center;
-        margin-right: $spacers-m;
-    }
+	&:not(:last-child) {
+		margin-bottom: $spacers-l;
+	}
+
+	&.unavailable {
+		opacity: $opacity-low;
+	}
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: $spacers-l;
+		height: $spacers-l;
+		margin-right: $spacers-m;
+		background: url(/assets/img/icons/check.svg) no-repeat center center;
+	}
 }

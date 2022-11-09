@@ -4,84 +4,91 @@
 @import "/src/assets/scss/base/typo";
 
 form {
-    & .group {
-        margin-bottom: $spacers-xl;
-    }
+	& .group {
+		margin-bottom: $spacers-xl;
+	}
 
-    & .message {
-        margin-top: $spacers-m;
-        display: block;
+	& .message {
+		display: block;
+		margin-top: $spacers-m;
 
-        &--error {
-            color: $color-red;
-        }
-        &--success {
-            text-align: center;
-            color: $color-green;
-            font-weight: $font-weight-bold;
-        }
-    }
+		&--error {
+			color: $color-red;
+		}
 
-    & label {
-        display: block;
-        margin-bottom: $spacers-m;
-    }
-    & input:not(.checkbox__input) {
-        width: 100%;
-        background: transparent;
-        outline: none;
-        box-shadow: none;
-        color: $color-black;
-        border: 1px solid $color-blue;
-        border-radius: $spacers-s;
-        padding: $spacers-m $spacers-l $spacers-m $spacers-l;
-        line-height: 1.5;
-        &:hover, &:focus  {
-            border-color: $color-black;
-        }
-    }
-    .checkbox {
-        @include base-flex(flex, flex-start, flex-start);
-        &__input {
-            @include base-flex(inline-flex, center, center);
-            appearance: none;
-            background-color: transparent;
-            margin: 0;
-            margin-right: $spacers-l;
-            border: 1px solid $color-blue;
-            border-radius: 0.15em;
-            transform: translateY(-0.075em);
-            place-content: center;
-            height: 1.5rem;
-            aspect-ratio: 1;
-            cursor: pointer;
+		&--success {
+			color: $color-green;
+			font-weight: $font-weight-bold;
+			text-align: center;
+		}
+	}
 
-            &:hover, &:focus  {
-                border-color: $color-black;
-            }
-        }
-            
-        &__input::before {
-            content: '';
-            display: inline-block;
-            width: $spacers-l;
-            height: $spacers-l;
-            background: url(/assets/img/icons/check.svg) no-repeat center center;
-            transform: scale(0);
-            transition: 120ms transform ease-in-out;
-            box-shadow: inset 1em 1em var(--form-control-color);
-        }
-            
-        &__input.checked::before {
-            transform: scale(1);
-        }
-        &__label {
-            display: inline-block;
-            max-width: 350px;
-            line-height: 1.5;
-            margin-bottom: 0;
-        }
-    }
-    & button {
-    }
+	& label {
+		display: block;
+		margin-bottom: $spacers-m;
+	}
+
+	& input:not(.checkbox__input) {
+		width: 100%;
+		padding: $spacers-m $spacers-l $spacers-m $spacers-l;
+		border: 1px solid $color-blue;
+		border-radius: $spacers-s;
+		background: transparent;
+		color: $color-black;
+		box-shadow: none;
+		outline: none;
+		line-height: 1.5;
+
+		&:hover,
+		&:focus {
+			border-color: $color-black;
+		}
+	}
+
+	.checkbox {
+		@include base-flex(flex, flex-start, flex-start);
+
+		&__input {
+			@include base-flex(inline-flex, center, center);
+
+			place-content: center;
+			height: 1.5rem;
+			margin: 0;
+			margin-right: $spacers-l;
+			border: 1px solid $color-blue;
+			border-radius: 0.15em;
+			background-color: transparent;
+			cursor: pointer;
+			transform: translateY(-0.075em);
+			appearance: none;
+			aspect-ratio: 1;
+
+			&:hover,
+			&:focus {
+				border-color: $color-black;
+			}
+		}
+
+		&__input::before {
+			content: "";
+			display: inline-block;
+			width: $spacers-l;
+			height: $spacers-l;
+			background: url(/assets/img/icons/check.svg) no-repeat center center;
+			box-shadow: inset 1em 1em var(--form-control-color);
+			transition: 120ms transform ease-in-out;
+			transform: scale(0);
+		}
+
+		&__input.checked::before {
+			transform: scale(1);
+		}
+
+		&__label {
+			display: inline-block;
+			max-width: 350px;
+			margin-bottom: 0;
+			line-height: 1.5;
+		}
+	}
 }

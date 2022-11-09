@@ -2,56 +2,70 @@
 // _typo.scss : Default classes for Project
 // MIT License
 // =============================================================================
-
 // =============================================================================
 // _typo.scss settings
 // =============================================================================
-
-
-/* Typography */
-
 body {
-  text-rendering: optimizeLegibility;
-  font-family: 'Rubik', sans-serif;
-  color: $color-black;
-  @include base-typo(14, $font-weight-regular, 0);
-  line-height: $line-height-base;
-  background-color: $color-background;
+	@include base-typo(14, $font-weight-regular, 0);
+
+	background-color: $color-background;
+	color: $color-black;
+	font-family: "Rubik", sans-serif;
+	line-height: $line-height-base;
+	text-rendering: optimizelegibility;
 }
 
 p {
-  margin: 0;
-  @include base-size(14);
+	@include base-size(14);
+
+	margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: $font-weight-bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: $font-weight-bold;
 }
 
-.base-h1, h1 {
-  @include base-typo(48, $font-weight-bold, 0);
+.base-h1,
+h1 {
+	@include base-typo(48, $font-weight-bold, 0);
 }
-.base-h2, h2 {
-  @include base-typo(24, $font-weight-bold, 0);
-  line-height: spToRem(28);
+
+.base-h2,
+h2 {
+	@include base-typo(24, $font-weight-bold, 0);
+
+	line-height: spToRem(28);
 }
+
 .base-h3 {
-  @include base-typo(20, $font-weight-bold, 0);
-}
-.base-body {
-  @include base-typo(14, $font-weight-regular, 0);
-}
-.base-body-small {
-  @include base-typo(12, $font-weight-regular, 0);
-}
-.base-button, button {
-  @include base-typo(14, $font-weight-semibold, 0);
+	@include base-typo(20, $font-weight-bold, 0);
 }
 
-a, .link {
-  @include base-typo(14, $font-weight-semibold, 0);
+.base-body {
+	@include base-typo(14, $font-weight-regular, 0);
 }
-a, .link:hover {
-  color: rgba( $color-black, .6 );
+
+.base-body-small {
+	@include base-typo(12, $font-weight-regular, 0);
+}
+
+.base-button,
+button {
+	@include base-typo(14, $font-weight-semibold, 0);
+}
+
+a,
+.link {
+	@include base-typo(14, $font-weight-semibold, 0);
+}
+
+a,
+.link:hover {
+	color: rgba($color-black, 0.6);
 }

@@ -4,24 +4,27 @@
 @import "/src/assets/scss/base/typo";
 
 .container {
-    position: relative;
-    width: 100%;
-    padding: $container-padding-y $container-padding-x;
-    max-width: 1045px;
-    margin: 0 auto;
-    height: 100vh;
+	position: relative;
+	width: 100%;
+	max-width: 1045px;
+	height: 100vh;
+	margin: 0 auto;
+	padding: $container-padding-y $container-padding-x;
 }
-.row {
-    @include base-flex(flex, center, center);
-    flex-wrap: wrap;
-    gap: $gutters;
 
+.row {
+	@include base-flex(flex, center, center);
+
+	flex-wrap: wrap;
+	gap: $gutters;
 }
+
 .col {
-    @include tablet-min {
-        flex: 1 0;
-    }
-    @include tablet-max {
-        width: 100%;
-    }
+	@include tablet-min {
+		flex: 1 0;
+	}
+
+	@include tablet-max {
+		width: 100%;
+	}
 }

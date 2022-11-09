@@ -4,75 +4,82 @@
 @import "/src/assets/scss/base/typo";
 
 button {
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  text-decoration: none;
-  font-size: 1rem;
-  cursor: pointer;
-  appearance: none;
-  border: 1px solid transparent;
-  text-align: center;
-  font-weight: $font-weight-medium;
-  width: 100%;
-  padding: spToRem(12)+rem $spacers-l;
-  border-radius: $spacers-m;
-  font-family: 'Rubik', sans-serif;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: spToRem(12)+rem $spacers-l;
+	border: 1px solid transparent;
+	border-radius: $spacers-m;
+	font-weight: $font-weight-medium;
+	font-size: 1rem;
+	font-family: "Rubik", sans-serif;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	appearance: none;
 
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding-bottom: 100%;
-    border-radius: 100%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 0.8s all cubic-bezier(0.55, 0, 0.1, 1);
-  }
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		width: 100%;
+		padding-bottom: 100%;
+		border-radius: 100%;
+		transition: 0.8s all cubic-bezier(0.55, 0, 0.1, 1);
+		transform: translate(-50%, -50%) scale(0);
+	}
 
-  &:hover::before {
-    transform: translate(-50%, -50%) scale(1.2);
-  }
+	&:hover::before {
+		transform: translate(-50%, -50%) scale(1.2);
+	}
 
-  & span {
-    position: relative;
-    z-index: 2;
-    line-height: 0;
-  }
+	& span {
+		position: relative;
+		z-index: 2;
+		line-height: 0;
+	}
 
-  &.primary {
-    color: $color-white;
-    background-color: $color-blue;
-    border-color: $color-blue;
-    &::before {
-        background-color: lighten($color-blue, 7%);
-    }
-    &:focus-within {
-      border-color: $color-black;
-    }
-  }
-  &.secondary {
-    color: $color-black;
-    background-color: transparent;
-    border-color: $color-blue;
-    &::before {
-        background-color: rgba($color-blue, .8);
-    }
-    &:focus-within {
-      border-color: $color-black;
-    }
-  }
-  &.featured {
-    background-color: $color-black;
-    color: $color-white;
-    &::before {
-        background-color: lighten($color-black, 20%);
-    }
-    &:focus-within {
-      border-color: $color-blue;
-    }
-  }
+	&.primary {
+		border-color: $color-blue;
+		background-color: $color-blue;
+		color: $color-white;
+
+		&::before {
+			background-color: lighten($color-blue, 7%);
+		}
+
+		&:focus-within {
+			border-color: $color-black;
+		}
+	}
+
+	&.secondary {
+		border-color: $color-blue;
+		background-color: transparent;
+		color: $color-black;
+
+		&::before {
+			background-color: rgba($color-blue, 0.8);
+		}
+
+		&:focus-within {
+			border-color: $color-black;
+		}
+	}
+
+	&.featured {
+		background-color: $color-black;
+		color: $color-white;
+
+		&::before {
+			background-color: lighten($color-black, 20%);
+		}
+
+		&:focus-within {
+			border-color: $color-blue;
+		}
+	}
 }
