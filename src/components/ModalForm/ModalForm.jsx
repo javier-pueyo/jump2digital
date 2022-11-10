@@ -1,7 +1,6 @@
 import React from 'react'
 import { Dialog } from "@headlessui/react";
-import Button from "../Button/Button";
-import Form from "../Form/Form";
+import { Button, Form } from "../index";
 import './ModalForm.scss'
 
 

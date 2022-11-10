@@ -1,10 +1,6 @@
-import React from "react";
-
-import Button from "../Button/Button";
-import List from "../List/List";
-import "./PriceCard.scss";
+import { Button, List, ModalForm } from "../index";
 import { useState } from "react";
-import ModalForm from "../ModalForm/ModalForm";
+import "./PriceCard.scss";
 
 function PriceCard({ className, plan, features }) {
   const { id, img, name, price, recurrence, cta } = plan;

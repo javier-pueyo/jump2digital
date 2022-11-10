@@ -1,4 +1,3 @@
-import React from 'react'
 import './Button.scss';
 
 function Button({handleClick = null, type = 'button',  className = '', children = ''}) {

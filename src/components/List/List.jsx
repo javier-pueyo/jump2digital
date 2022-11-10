@@ -1,7 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import React from 'react'
 import './List.scss';
-import { useState } from "react";
 
 function List({className, items = [], type}) {
 

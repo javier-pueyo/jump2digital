@@ -2,6 +2,7 @@
     "plans" : [
         {
             "id" : "starter",
+            "class" : "secondary",
             "img" : { 
                 "name" : "starter plan",
                 "url" : "/assets/img/plan_starter.png"
@@ -13,6 +14,7 @@
         },
         {
             "id" : "pro",
+            "class" : "featured",
             "img" : { 
                 "name" : "pro plan",
                 "url" : "/assets/img/plan_pro.png"
@@ -24,6 +26,7 @@
         },
         {
             "id" : "teams",
+            "class" : "primary",
             "img" : { 
                 "name" : "teams plan",
                 "url" : "/assets/img/plan_teams.png"
