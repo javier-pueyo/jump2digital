@@ -16,12 +16,12 @@ function PriceCard({ className, plan, features }) {
 
   return (
     <>
-      <div class={`cardPrice ${className}`}>
-        <img class="cardPrice__img" src={img.url} alt={img.name} />
-        <div class="cardPrice__header">
-          <p class="cardPrice__name">{name}</p>
-          <p class="cardPrice__price">{price}</p>
-          <p class="cardPrice__recurrence">{recurrence}</p>
+      <div className={`cardPrice ${className}`}>
+        <img className="cardPrice__img" src={img.url} alt={img.name} />
+        <div className="cardPrice__header">
+          <p className="cardPrice__name">{name}</p>
+          <p className="cardPrice__price">{price}</p>
+          <p className="cardPrice__recurrence">{recurrence}</p>
         </div>
         <List className={className} items={features} type={id} />
         <Button className={className} handleClick={changeStateModal} >

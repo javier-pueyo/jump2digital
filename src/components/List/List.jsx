@@ -19,7 +19,6 @@ function List({className, items = [], type}) {
       })
     }
     setFeatures(setAvaliableItems(items, type));
-    console.log('hola', setAvaliableItems(items, type));
   }, [items])
 
   return (

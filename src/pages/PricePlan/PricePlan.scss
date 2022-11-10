@@ -1,7 +1,7 @@
-@import "/src/assets/scss/utilities/mixins";
-@import "/src/assets/scss/utilities/variables";
-@import "/src/assets/scss/utilities/responsive";
-@import "/src/assets/scss/base/typo";
+@import "/src/theme/scss/utilities/mixins";
+@import "/src/theme/scss/utilities/variables";
+@import "/src/theme/scss/utilities/responsive";
+@import "/src/theme/scss/base/typo";
 
 .container {
 	position: relative;
@@ -14,17 +14,18 @@
 
 .row {
 	@include base-flex(flex, center, center);
-
-	flex-wrap: wrap;
 	gap: $gutters;
+	@include desktop-max {
+		flex-wrap: wrap;
+	}
 }
 
 .col {
-	@include tablet-min {
-		flex: 1 0;
+	@include desktop-min {
+		width: calc(#{$width-third} - #{$gutters-third});
 	}
 
-	@include tablet-max {
+	@include desktop-max {
 		width: 100%;
 	}
 }
