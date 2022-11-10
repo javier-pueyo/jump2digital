@@ -1,9 +1,9 @@
 import './Button.scss';
 
-function Button({handleClick = null, type = 'button',  className = '', children = ''}) {
+function Button({handleClick = () => {}, type = 'button',  className = '', children = ''}) {
   return (
     <button 
-      onClick={event => handleClick(true)}
+      onClick={event => { handleClick(true)}}
       className={className}
       type={type}
     >
