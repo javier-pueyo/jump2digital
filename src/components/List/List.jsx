@@ -19,7 +19,7 @@ function List({className, items = [], type}) {
       })
     }
     setFeatures(setAvaliableItems(items, type));
-  }, [items])
+  }, [items, type])
 
   return (
     <ul className={className}>
