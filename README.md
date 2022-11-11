@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Jump2Digital - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Proyecto realizado para Jump2Digital, organizada por Barcelona Digital Talent. Consiste en un Hackathon donde debes aplicar tus conocimientos de front-end para replicar un mockup de Figma.
 
-## Available Scripts
+<img alt="common readme" src="jumpToDigital-figma.png">
 
-In the project directory, you can run:
+*Captura de pantalla del proyecto de Figma en la web https://nuwe.io/*
+
+## Enlace al proyecto desplegado
+
+[Ver en netlify](https://jump2digital-pueyo-mir.netlify.app/) 
+
+## Background
+
+LLeve acabo este proyecto, ya que me parece muy interesante el evento Jump2Digital y quería participar en las diversas actividades que aporta el evento. Respecto al Hackaton, creo que es una buena forma de crear relaciones profesionales, puesto que actualmente estoy buscando empleo de Frontend, por otro lado, este tipo de eventos es algo que me divierte y me motiva a mejorar. 
+
+## Funcionalidad
+Se trata de una sola ruta, donde se puede observar tres tipos de suscripción. En cuanto clicas su respectivo CTA se abre un modal, desde este puedes ponerte en contacto ingresando tu email y clicando a enviar.
+
+## API/Components
+
+ ``` shell
+├───components
+│   ├───Button
+│   ├───Form
+│   ├───List
+│   ├───ModalForm
+│   └───PriceCard
+├───data
+├───pages
+│   └───PricePlan
+└───theme
+    └───scss
+        ├───base
+        └───utilities
+```
+
+
+- ### Components 
+Se ha creado una estructura atomizada para todos los componentes que forman las cartas de suscripciones.
+
+- ### Data
+Archivo de Json donde se hay toda la información que imprimirán los componentes. Como se si tratará de una base de datos.
+
+- ### Pages
+Layout que combina los diferentes componentes. 
+
+- ### Theme
+Estilos globales (scss) para todos los componentes.
+
+
+## Installation
+
+Este proyecto se inició con la aplicación Create React.
+
+**Scripts disponibles:**
+
+En el directorio del proyecto, puede ejecutar:
+
+### `npm i`
+Para obtener todas las dependencias/librerías del proyecto.
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ejecuta la aplicación en el modo de desarrollo.
+Abra http://localhost:3000 para verlo en su navegador.
 
 ### `npm run build`
+Crea la aplicación para la producción en la carpeta de *build*.
+Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La compilación se minimiza y los nombres de archivo incluyen los hashes.
+¡Tu aplicación está lista para ser implementada!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Stack
 
-### `npm run eject`
+- SCSS
+- HTML
+- Javascript
+- ReactJS
+- JSON
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Roadmap e imágenes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img alt="common readme" src="screenshoot.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+*Captura de pantalla del resultado final del proyecto*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Información de contacto
 
-## Learn More
+1. **Teléfono**: 609 650 420
+2. **Email**: [hola@pueyomir.com](mailto:hola@pueyomir.com)
+3. **LinkedIn**: [Veure el meu perfil](https://www.linkedin.com/in/pueyojavier) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Licencia 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Licencia del proyecto: [MIT](https://opensource.org/licenses/MIT)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
