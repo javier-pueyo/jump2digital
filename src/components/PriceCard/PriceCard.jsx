@@ -10,6 +10,10 @@ function PriceCard({ className, plan, features }) {
     setStateModal(boolean);
   }
 
+  const openModal = () => {
+    setStateModal(true);
+  }
+
   return (
     <>
       <div className={`cardPrice ${className}`}>
@@ -20,7 +24,7 @@ function PriceCard({ className, plan, features }) {
           <p className="cardPrice__recurrence">{recurrence}</p>
         </div>
         <List className={className} items={features} type={id} />
-        <Button className={className} handleClick={changeStateModal} >
+        <Button className={className} onClick={openModal} >
           {cta}
         </Button>
       </div>

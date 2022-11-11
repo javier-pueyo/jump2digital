@@ -13,7 +13,7 @@ function ModalForm({openModal, handleCloseModal, title}) {
   return (
     <Dialog className="modal" onClose={closeModal} open={openModal}>
         <div className="modal__content">
-          <Button className="modal__close" handleClick={closeModal} >
+          <Button className="modal__close" onClick={closeModal} >
               <img width="16" height="16" src="/assets/img/icons/close.svg" alt="close" />
           </Button>
           <p className="modal__subtitle">You have selected:</p>

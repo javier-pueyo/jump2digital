@@ -1,9 +1,14 @@
 import './Button.scss';
 
-function Button({handleClick = () => {}, type = 'button',  className = '', children = ''}) {
+function Button({onClick, type = 'button',  className = '', children = ''}) {
+
+  const usedOnClick = (event) => {
+    return onClick ? onClick(event) : null
+  }
+  
   return (
     <button 
-      onClick={event => { handleClick(true)}}
+      onClick={event => { usedOnClick(event) }}
       className={className}
       type={type}
     >
