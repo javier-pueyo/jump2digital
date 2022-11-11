@@ -88,7 +88,8 @@ La compilación se minimiza y los nombres de archivo incluyen los hashes.
 
 ## Información de contacto
 
-1. **Email**: [hola@pueyomir.com](mailto:hola@pueyomir.com)
+1. **Nombre:** Javier Pueyo
+1. **Email**: [pueyo.mir@gmail.com](mailto:pueyo.mir@gmail.com)
 2. **LinkedIn**: [Ver mi perfil](https://www.linkedin.com/in/pueyojavier) 
 
 ## Licencia 
