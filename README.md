@@ -1,6 +1,6 @@
 # Jump2Digital - Frontend
 
-> Proyecto realizado para Jump2Digital, organizada por Barcelona Digital Talent. Consiste en un Hackathon donde debes aplicar tus conocimientos de front-end para replicar un mockup de Figma.
+> Proyecto realizado para Jump2Digital, organizado por Barcelona Digital Talent. Consiste en un Hackathon donde debes aplicar tus conocimientos de front-end para replicar un mockup de Figma.
 
 <img alt="common readme" src="jumpToDigital-figma.png">
 
@@ -12,10 +12,10 @@
 
 ## Background
 
-LLeve acabo este proyecto, ya que me parece muy interesante el evento Jump2Digital y quería participar en las diversas actividades que aporta el evento. Respecto al Hackaton, creo que es una buena forma de crear relaciones profesionales, puesto que actualmente estoy buscando empleo de Frontend, por otro lado, este tipo de eventos es algo que me divierte y me motiva a mejorar. 
+LLevé a acabo este proyecto, ya que me parece muy interesante el evento Jump2Digital y quería participar en las diversas actividades que aporta el mismo. Respecto al Hackaton, creo que es una buena forma de crear relaciones profesionales, puesto que actualmente estoy buscando empleo de Frontend. Por otro lado, este tipo de eventos es algo que me divierte y me motiva a mejorar. 
 
 ## Funcionalidad
-Se trata de una sola ruta, donde se puede observar tres tipos de suscripción. En cuanto clicas su respectivo CTA se abre un modal, desde este puedes ponerte en contacto ingresando tu email y clicando a enviar.
+Se trata de una sola ruta, donde se puede observar tres tipos de suscripciones. Al clicar su respectivo CTA se abre un modal, desde este puedes ponerte en contacto ingresando tu email y clicando a enviar.
 
 ## API/Components
 
@@ -40,7 +40,7 @@ Se trata de una sola ruta, donde se puede observar tres tipos de suscripción. E
 Se ha creado una estructura atomizada para todos los componentes que forman las cartas de suscripciones.
 
 - ### Data
-Archivo de Json donde se hay toda la información que imprimirán los componentes. Como se si tratará de una base de datos.
+Archivo de Json donde se encuentra toda la información que imprimirán los componentes. Como se si tratase de una base de datos.
 
 - ### Pages
 Layout que combina los diferentes componentes. 
@@ -88,9 +88,8 @@ La compilación se minimiza y los nombres de archivo incluyen los hashes.
 
 ## Información de contacto
 
-1. **Teléfono**: 609 650 420
-2. **Email**: [hola@pueyomir.com](mailto:hola@pueyomir.com)
-3. **LinkedIn**: [Veure el meu perfil](https://www.linkedin.com/in/pueyojavier) 
+1. **Email**: [hola@pueyomir.com](mailto:hola@pueyomir.com)
+2. **LinkedIn**: [Ver mi perfil](https://www.linkedin.com/in/pueyojavier) 
 
 ## Licencia 
 
